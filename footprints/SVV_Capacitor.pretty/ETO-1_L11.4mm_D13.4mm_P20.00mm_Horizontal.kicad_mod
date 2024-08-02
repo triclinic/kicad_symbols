@@ -1,0 +1,70 @@
+(footprint "ETO-1_L11.4mm_D13.4mm_P20.00mm_Horizontal" (version 20211014) (generator pcbnew)
+  (layer "F.Cu")
+  (tedit 0)
+  (attr through_hole)
+  (fp_text reference "REF**" (at 13 -5.5 unlocked) (layer "F.SilkS")
+    (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp 19739f25-314b-4163-8e21-dd9cf6cdffae)
+  )
+  (fp_text value "ETO-1_L11.4mm_D13.4mm_P20.0mm" (at 9.64 8.03 unlocked) (layer "F.Fab")
+    (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp 8d0fbc5a-ca46-41ec-9c27-58414ce14e29)
+  )
+  (fp_text user "+" (at 3.8 1.3 unlocked) (layer "F.SilkS")
+    (effects (font (size 1.5 1.5) (thickness 0.15)))
+    (tstamp 08fa16ab-9e55-4695-b39f-4fe3c4eae32b)
+  )
+  (fp_text user "${REFERENCE}" (at 7.6 -1.1 unlocked) (layer "F.Fab")
+    (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp 22f569d2-e5a1-452f-a762-26035124c030)
+  )
+  (fp_text user "+" (at 6.4 1.3 unlocked) (layer "F.Fab")
+    (effects (font (size 2 2) (thickness 0.15)))
+    (tstamp 30eee57c-02e3-4f3c-b3f2-f895de4d7a7b)
+  )
+  (fp_line (start 4.8 -6.9) (end 10.1 -6.9) (layer "F.SilkS") (width 0.12) (tstamp 62563c57-336f-44ba-b0c1-a5b5c831d588))
+  (fp_line (start 4.8 6.9) (end 10.1 6.9) (layer "F.SilkS") (width 0.12) (tstamp 69108271-5e43-4866-9853-dbc22a175a5a))
+  (fp_line (start 4.8 0) (end 4.8 -6.9) (layer "F.SilkS") (width 0.12) (tstamp 7e4080b5-114d-4a85-b48c-9b79da9603df))
+  (fp_line (start 10.1 6.9) (end 10.1 4.4) (layer "F.SilkS") (width 0.12) (tstamp 90afc107-32eb-4e63-a984-50c2a4a965c3))
+  (fp_line (start 1.1 0) (end 4.8 0) (layer "F.SilkS") (width 0.12) (tstamp 97d2a8ec-a9a0-402f-a0b0-883789666e97))
+  (fp_line (start 4.8 0) (end 4.8 6.9) (layer "F.SilkS") (width 0.12) (tstamp d8d973b5-201c-4d27-be0e-e61ed9b34a41))
+  (fp_line (start 10.1 -6.9) (end 10.1 -4.4) (layer "F.SilkS") (width 0.12) (tstamp d9f15635-04ea-41f7-9d57-967d93fd5aab))
+  (fp_line (start 16.6 0) (end 18.9 0) (layer "F.SilkS") (width 0.12) (tstamp fc8e20e8-47af-4d33-9107-7ed332603ece))
+  (fp_rect (start 10.1 -4.4) (end 16.6 4.4) (layer "F.SilkS") (width 0.12) (fill none) (tstamp 1ba5b10f-e486-4e41-b5d7-e05dce3e9ce9))
+  (fp_rect (start -1 -7.2) (end 21.1 7.2) (layer "F.CrtYd") (width 0.05) (fill none) (tstamp fa80e72e-d482-433f-a193-1cb32155dc92))
+  (fp_line (start 0 0) (end 5 0) (layer "F.Fab") (width 0.1) (tstamp 038dcac0-3997-499b-829f-f7abeaabc5b8))
+  (fp_line (start 5 6.7) (end 10 6.7) (layer "F.Fab") (width 0.1) (tstamp 0af21107-951b-4ba5-8f8c-6c94c0189552))
+  (fp_line (start 10 4.2) (end 10 6.7) (layer "F.Fab") (width 0.1) (tstamp 1862f4a0-e93f-4f2a-a562-8377694b981b))
+  (fp_line (start 16.4 0) (end 20 0) (layer "F.Fab") (width 0.1) (tstamp 9851089b-3eb5-46a5-ba30-405511d2d966))
+  (fp_line (start 10 -6.7) (end 5 -6.7) (layer "F.Fab") (width 0.1) (tstamp a926e3a6-ec50-4b8d-a511-432f2c85a35a))
+  (fp_line (start 10 -6.7) (end 10 -4.2) (layer "F.Fab") (width 0.1) (tstamp f9f0a429-1c6a-44e0-b10a-0ffb4d671fa0))
+  (fp_line (start 5 -6.7) (end 5 6.7) (layer "F.Fab") (width 0.1) (tstamp fee89a9f-c156-443f-9aca-46b054108097))
+  (fp_rect (start 10 -4.2) (end 16.4 4.2) (layer "F.Fab") (width 0.1) (fill none) (tstamp 537eb769-1df1-403a-9dc8-879d077cb046))
+  (pad "1" thru_hole rect (at 0 0) (size 1.7 1.7) (drill 0.9) (layers *.Cu *.Mask) (tstamp b530fc2e-7720-4efb-84a7-a9bf381eabb8))
+  (pad "2" thru_hole circle (at 20 0) (size 1.7 1.7) (drill 0.9) (layers *.Cu *.Mask) (tstamp d3cae4cc-ad0d-412b-8367-15fdd578b2d3))
+  (group "" (id 0547f62b-c9a0-455d-9c83-624d65e82bd6)
+    (members
+      038dcac0-3997-499b-829f-f7abeaabc5b8
+      0af21107-951b-4ba5-8f8c-6c94c0189552
+      1862f4a0-e93f-4f2a-a562-8377694b981b
+      537eb769-1df1-403a-9dc8-879d077cb046
+      9851089b-3eb5-46a5-ba30-405511d2d966
+      a926e3a6-ec50-4b8d-a511-432f2c85a35a
+      f9f0a429-1c6a-44e0-b10a-0ffb4d671fa0
+      fee89a9f-c156-443f-9aca-46b054108097
+    )
+  )
+  (group "" (id 9b25e6ce-c01f-40f9-873a-e55b962891a0)
+    (members
+      1ba5b10f-e486-4e41-b5d7-e05dce3e9ce9
+      62563c57-336f-44ba-b0c1-a5b5c831d588
+      69108271-5e43-4866-9853-dbc22a175a5a
+      7e4080b5-114d-4a85-b48c-9b79da9603df
+      90afc107-32eb-4e63-a984-50c2a4a965c3
+      97d2a8ec-a9a0-402f-a0b0-883789666e97
+      d8d973b5-201c-4d27-be0e-e61ed9b34a41
+      d9f15635-04ea-41f7-9d57-967d93fd5aab
+      fc8e20e8-47af-4d33-9107-7ed332603ece
+    )
+  )
+)
