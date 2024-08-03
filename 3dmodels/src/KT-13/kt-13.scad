@@ -1,50 +1,65 @@
-module pins() {
-    color([0.8,0.8,0.8]) {
-        translate([-0.1,-0.35,-4])
-            cube([0.2,0.7,4]);
-        translate([-0.1,-0.35+2.425,-4])
-            cube([0.2,0.7,4]);
-        translate([-0.1,-0.35-2.425,-4])
-            cube([0.2,0.7,4]);
-    }
+use <..\misc\pins.scad>
+
+pinHeight = 4;
+placementOffset = 2;
+
+formedPinsOffset = 1.2;
+showCan = true;
+showPins = true;
+
+pinWidth = 0.7;
+pinDepth = 0.2;
+pinStep = 2.425;
+
+packWidth = 6.9;
+packDepth = 2.5;
+packHeight = 4.8;
+cutHeight = 4.8-3.6;
+cutDepth = 1;
+
+rounding = 0.2;
+
+module pins(){
+    squaredPinFormed(pinWidth, pinDepth, pinHeight, -formedPinsOffset, 1/8, placementOffset/pinHeight);
+    translate([pinStep,0,0])
+        squaredPinFormed(pinWidth, pinDepth, pinHeight, formedPinsOffset, 1/8, placementOffset/pinHeight);
+    translate([pinStep * 2,0,0])
+        squaredPinFormed(pinWidth, pinDepth, pinHeight, -formedPinsOffset, 1/8, placementOffset/pinHeight);
 }
 
-width = 6.9;
-depth = 2.5;
-depth2 = 1;
-height = 4.8;
-height2 = 3.6;
-r=0.2;
+base = [[rounding,rounding], 
+        [packWidth - rounding,rounding], 
+        [rounding,packDepth - rounding], 
+        [packWidth - rounding,packDepth - rounding]];
+
+hat = [[rounding,rounding,packHeight-rounding], 
+        [packWidth - rounding,rounding,packHeight-rounding], 
+        [rounding,packDepth - rounding,packHeight-cutHeight-rounding], 
+        [packWidth - rounding,packDepth - rounding,packHeight-cutHeight-rounding],
+        [rounding,packDepth - cutDepth - rounding,packHeight-rounding], 
+        [packWidth - rounding,packDepth - cutDepth - rounding,packHeight-rounding]];
 
 module can()  {
-    color([1,0.4,0]) {
-        $fn = 100;
+    translate([pinStep-packWidth/2,-packDepth/2,0]){
         hull(){
-        translate([depth/2-r,width/2-r])
-            cylinder(r,r,r);
-        translate([depth/2-r,-(width/2-r)])
-            cylinder(r,r,r);
-        translate([-(depth/2-r),width/2-r])
-            cylinder(r,r,r);
-        translate([-(depth/2-r),-(width/2-r)])
-            cylinder(r,r,r);
-        
-        translate([depth/2-r,width/2-r,height-r])
-            sphere(r);
-        translate([depth/2-r,-(width/2-r),height-r])
-            sphere(r);
-        translate([-(depth/2-r),width/2-r,height2-r])
-            sphere(r);
-        translate([-(depth/2-r),-(width/2-r),height2-r])
-            sphere(r);
-        
-        translate([depth/2-r-depth2,width/2-r,height-r])
-            sphere(r);
-        translate([depth/2-r-depth2,-(width/2-r),height-r])
-            sphere(r);
+            for( i = base ){
+                translate(i)
+                    cylinder(rounding,rounding,rounding);
+            }
+            for( i = hat ){
+                translate(i)
+                    sphere(rounding);
+            }
         }
     }
 }
 
-pins();
-can();
+module all(){
+    translate([0,formedPinsOffset, pinHeight-placementOffset]){
+        if(showCan) can();
+        if(showPins) pins();
+    }
+}
+
+$fn = 100;
+all();

@@ -4,10 +4,10 @@ DEF STL_object Transform {
   children [
     Shape {
       appearance Appearance {
-        material DEF gold Material {
-          diffuseColor 0.7814569536423841 0.7814569536423842 0.0
-          emissiveColor 0.25165562913907286 0.25165562913907286 0.25165562913907286
-          specularColor 0.699682119205298 0.6996821192052981 0.012
+        material DEF metall Material {
+          diffuseColor 0.6490066225165563 0.6490066225165563 0.6490066225165563
+          emissiveColor 0.271523178807947 0.271523178807947 0.271523178807947
+          specularColor 0.6490066225165563 0.6490066225165563 0.6490066225165563
           ambientIntensity 1.0
           transparency 0.0
           shininess 0.35
@@ -35830,14 +35830,7 @@ DEF STL_object Transform {
   children [
     Shape {
       appearance Appearance {
-        material DEF metall Material {
-          diffuseColor 0.6490066225165563 0.6490066225165563 0.6490066225165563
-          emissiveColor 0.271523178807947 0.271523178807947 0.271523178807947
-          specularColor 0.6490066225165563 0.6490066225165563 0.6490066225165563
-          ambientIntensity 1.0
-          transparency 0.0
-          shininess 0.35
-        }
+        material USE metall
       }
       geometry IndexedFaceSet {
         normalPerVertex TRUE

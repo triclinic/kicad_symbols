@@ -34,8 +34,8 @@
   (pad "3" thru_hole oval (at 4.14 0) (size 1.2 1.2) (drill 0.7) (layers *.Cu *.Mask) (tstamp c8d38fc5-04d4-4694-aae1-adb1c91f01e8))
   (pad "4" thru_hole oval (at 2.07 -2.07) (size 1.2 1.2) (drill 0.7) (layers *.Cu *.Mask) (tstamp 1f468cf7-b021-46af-bf8d-cd8decad4ddd))
   (model "C:/Users/Виталий/Documents/KiCad/6.0/3dmodels/TO-18/to-18-4_wide_gold.wrl"
-    (offset (xyz 2.1 0 4))
+    (offset (xyz 0 0 0))
     (scale (xyz 1 1 1))
-    (rotate (xyz 0 0 -90))
+    (rotate (xyz 0 0 0))
   )
 )

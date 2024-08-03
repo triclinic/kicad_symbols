@@ -27,7 +27,7 @@ module squaredPinDKnee(width, depth, length1, angle1, length2, angle2, length3){
     }
 }
 
-module squaredPinFormed(width, depth, length, deltaR, , upr = 1/3, lowr = 2/7){
+module squaredPinFormed(width, depth, length, deltaR = 0, upr = 1/3, lowr = 2/7){
     len1 = length * upr;
     len2 = length * lowr;
     h = length - len1 - len2;
@@ -65,7 +65,7 @@ module circledPinDKnee(diameter, length1, angle1, length2, angle2, length3){
     }
 }
 
-module circledPinFormed(diameter, length, deltaR, upr = 1/3, lowr = 2/7){
+module circledPinFormed(diameter, length, deltaR = 0, upr = 1/3, lowr = 2/7){
     len1 = length * upr;
     len2 = length * lowr;
     h = length - len1 - len2;
